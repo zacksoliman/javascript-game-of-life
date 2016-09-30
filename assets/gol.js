@@ -5,66 +5,69 @@
   programming project.
 */
 
+$(function() {
+    var playEvent = function() {
+        play();
+        $(this).text('Stop');
+        $(this).unbind('click').click(stopEvent);
+    };
+    var stopEvent = function() {
+        stop();
+        $(this).text('Play');
+        $(this).unbind('click').click(playEvent);
+    };
+    $('#toggle-play').click(playEvent);
+
+    $('#w, #h').on('input', function() {
+
+        var w = $('#w').val(), h = $('#h').val();
+
+        if(isNaN(h) || isNaN(w) || w < 1 || h < 1 || h > 100 || w > 100) {
+            return;
+        }
+        
+        resizeGrid(w, h);
+    });
+});
 
 // object that represents the grid. Will expose methods to manipulate it's dislay.
-var Grid = function(numOfRows, numOfCols, cell_height, cell_width, initial_setup) {
+var Grid = {
+    create: function(rows, cols) {
+        var $grid = $("#grid");
+        var i = 0;
+        var j = 0;
+        var $newRow, $td;
 
-    var nRows = numOfRows || 20;
-    var nCols = numOfCols || 20;
-    var cell_width = cell_width || 10;
-    var cell_height = cell_height || 10;
-    var init_setup = initial_setup || [];
+        $grid.empty();
 
-    return {
-        draw: function() {
-            console.log("Drawing");
-            buildTable(nRows, nCols)
-        },
-        update: function() {
-            //TODO
-        },
-        addLines: function() {
-            //TODO
-        },
-        addCols: function() {
-            //TODO
-        },
-        changeCellHeight: function() {
-            //TODO
-        },
-        changeCellWidth: function() {
-            //TODO
-        },
-        fillCell: function() {
-            //TODO;
-        },
-        killCell: function() {
-            //TODO;
+        for (i = 0; i < rows; i++) {
+            $newRow = $('<tr></tr>');
+            for (j = 0; j < cols; j++){
+                $td = $('<td id="' + i + '-' + j + '" onclick="changeState(' + i + ',' + j + ')"></td>');
+                $td = $($td).appendTo($newRow);
+            }
+            $newRow.appendTo($grid);
         }
+    },
+    changeCellHeight: function() {
+        //TODO
+    },
+    changeCellWidth: function() {
+        //TODO
+    },
+    colorCell: function(x, y, color) {
+        $('#' + x + '-' + y).style('background-color', color);
     }
 };
 
-// object representing a cell
-var Cell = function() {
-    //TODO
+var playInterval = null;
+
+function play() {
+    if(playInterval == null)
+        playInterval = setInterval(step, 300);
 }
 
-// Helper function to draw the table cells
-function buildTable(rows, cols) {
-    var $grid = $("#grid");
-    var i = 0;
-    var j = 0;
-    var $newRow, $td;
-
-    $grid.empty();
-
-    for (i = 0; i < rows; i++) {
-        $newRow = $('<tr></tr>');
-        for (j = 0; j < cols; j++){
-            $td = $('<td class=" row-' + i + ' col-' + j + '" contentEditable="false"></td>');
-            $td = $($td).appendTo($newRow);
-        }
-        $newRow.appendTo($grid);
-    }
-
-};
+function stop() {
+    clearInterval(playInterval);
+    playInterval = null;
+}
