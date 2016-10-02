@@ -8,21 +8,23 @@
 $(function() {
     var playEvent = function() {
         play();
-        $(this).text('Stop');
+        $(this).text('⬛ Stop');
         $(this).unbind('click').click(stopEvent);
+        $('#w, #h').prop('disabled', true);
     };
     var stopEvent = function() {
         stop();
-        $(this).text('Play');
+        $(this).text('▶ Play');
         $(this).unbind('click').click(playEvent);
+        $('#w, #h').prop('disabled', false);
     };
     $('#toggle-play').click(playEvent);
 
     $('#w, #h').on('input', function() {
 
-        var w = $('#w').val(), h = $('#h').val();
+        var w = +$('#w').val(), h = +$('#h').val();
 
-        if(isNaN(h) || isNaN(w) || w < 1 || h < 1 || h > 100 || w > 100) {
+        if(isNaN(h) || isNaN(w) || w < 1 || h < 1 || h > 100 || w > 100 || playInterval) {
             return;
         }
         
@@ -56,7 +58,7 @@ var Grid = {
         //TODO
     },
     colorCell: function(x, y, color) {
-        $('#' + x + '-' + y).style('background-color', color);
+        $('#' + x + '-' + y).css('background-color', color);
     }
 };
 

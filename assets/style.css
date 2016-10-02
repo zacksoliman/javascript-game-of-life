@@ -5,6 +5,7 @@ body {
 table {
     margin: auto;
     border-collapse: collapse;
+    border: 3px solid green;
 }
 td, th {
     width: 10px;
@@ -19,6 +20,7 @@ td {
 button, input {
     border: 1px solid black;
     height: 30px;
+    padding: 0 5px;
     background-color: #CCC;
     text-align: center;
 }
