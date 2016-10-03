@@ -3,25 +3,25 @@ var largeur=40, hauteur=40;
 var cells = [];
 
 function changeState(x, y) {
-    alert('TODO');
+    console.log('changeState');
 }
 
 function step() {
-    console.log('TODO');
+    console.log('step');
 }
 
 function randomGrid(percent) {
-    alert('TODO');
+    console.log('randomGrid');
 }
 
 function resetGrid() {
-    alert('TODO');
+    console.log('resetGrid');
 }
 
 function resizeGrid(width, height) {
     Grid.create(width, height);
-    
-    alert('TODO');
+
+    console.log('resizeGrid');
 }
 
 // Crée la grille initiale

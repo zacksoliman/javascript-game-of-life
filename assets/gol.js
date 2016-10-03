@@ -18,6 +18,7 @@ $(function() {
         $(this).unbind('click').click(playEvent);
         $('#w, #h').prop('disabled', false);
     };
+    $('td').mousedown(mouseDown).mouseover(mouseOver);
     $('#toggle-play').click(playEvent);
 
     $('#w, #h').on('input', function() {
@@ -27,7 +28,7 @@ $(function() {
         if(isNaN(h) || isNaN(w) || w < 1 || h < 1 || h > 100 || w > 100 || playInterval) {
             return;
         }
-        
+
         resizeGrid(w, h);
     });
 });
@@ -59,17 +60,42 @@ var Grid = {
     },
     colorCell: function(x, y, color) {
         $('#' + x + '-' + y).css('background-color', color);
+        currentColor = color;
     }
 };
 
+var currentColor = 'darkblue';
 var playInterval = null;
+var isMouseDown = false;
 
 function play() {
     if(playInterval == null)
-        playInterval = setInterval(step, 300);
+        playInterval = setInterval(step, 50);
 }
 
 function stop() {
     clearInterval(playInterval);
     playInterval = null;
 }
+
+function mouseDown(e) {
+  console.log('mouseDown')
+  isMouseDown = true;
+  $(this).css('background-color', currentColor);
+  return false;
+}
+
+function mouseOver(e) {
+  console.log('mouseover')
+  if (isMouseDown) {
+    $(this).css('background-color', currentColor);
+    console.log(this.id)
+    var position = this.id.split('-');
+    changeState(+position[0], +position[1]);
+  }
+}
+
+$(document).mouseup(function () {
+      console.log('mouseup')
+      isMouseDown = false;
+    })
