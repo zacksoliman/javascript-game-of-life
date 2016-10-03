@@ -95,7 +95,7 @@ function resizeGrid(width, height) {
             }
 
             new_cells[i].push(val);
-            draw(j, i, cells);
+            draw(j, i, new_cells);
         }
     }
 

@@ -30,6 +30,7 @@ $(function() {
         }
 
         resizeGrid(w, h);
+        $('td').mousedown(mouseDown).mouseover(mouseOver);
     });
 });
 
@@ -51,6 +52,7 @@ var Grid = {
             }
             $newRow.appendTo($grid);
         }
+
     },
     changeCellHeight: function() {
         //TODO
@@ -81,14 +83,14 @@ function stop() {
 function mouseDown(e) {
   console.log('mouseDown')
   isMouseDown = true;
-  $(this).css('background-color', currentColor);
+  //$(this).css('background-color', currentColor);
   return false;
 }
 
 function mouseOver(e) {
   console.log('mouseover')
   if (isMouseDown) {
-    $(this).css('background-color', currentColor);
+    //$(this).css('background-color', currentColor);
     console.log(this.id)
     var position = this.id.split('-');
     changeState(+position[0], +position[1]);
