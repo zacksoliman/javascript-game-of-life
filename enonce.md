@@ -4,18 +4,33 @@
 
 ## Introduction *z
 
-Présentation du TP
+### Présentation du TP
 
-Le TP2 a pour but de vous faire pratiquer les concepts suivants : les boucles, les tableaux, les fonctions,
-la décomposition fonctionnelle, le traitement d’événements, et la programmation web.
-Le code que vous devez écrire (fichier “tp2.js”) implante un jeu qui exécute dans l’environnement du
-fureteur. Bien qu’il soit possible et même judiscieux d’utiliser codeBoot ou bien node.js pour développer
-certaines parties du jeu ultimement il faudra faire des tests et du déboguage avec les outils de développement
-du fureteur.
-Vous pouvez utiliser le code qui a été montré dans le cours mais vous ne devez pas utiliser du code provenant
-d’ailleurs (du web).
+Dans ce premier projet vous aurez l'occasion de pratiquer les concepts
+suivants:
 
-Présentation du jeu -> page wikipédia
+* Boucles
+* Tableaux
+* Fonctions et la décomposition fonctionnelle
+
+Vous devez écrire une implantation d'un jeu qui exécute dans l’environnement du fureteur.
+Par conséquent, vous allez explorer un nouveau environnement de développement.
+Nous vous fournissons une petite librairie qui servira à gérer l'interface graphique ainsi
+qu'un fichier HTML est d'un gabarit écrit en Javascript qui vous serviront d'un point de
+départ pour votre projet. Vous pouvez utiliser le code qui a été montré dans le cours mais
+vous ne devez pas utiliser du code provenant d’ailleurs (du web).
+
+### Présentation du jeu
+(Tirée de Wikipédia francophone où traduit de Wikipédia anglophone)
+
+Conway's Game of Life (ou le jeu de la vie) est un automate cellulaire imaginé par John Horton Conway en 1970 qui est probablement,
+au début du xxie siècle, le plus connu de tous les automates cellulaires.
+Malgré des règles très simples, le jeu de la vie est Turing-complet.
+
+Le jeu est en fait un jeu qui se déroule sans joueurs. En fait, l'évolution du jeu est déterminée par son état initial.
+Donc, la seule interaction faite par le joueur est la création de la configuration de cet état initial.
+Ensuite, le joueur ne fait qu'observer l'évolution des cellules. Le joueur plus avancée peu créer des
+motifs avec des propriétés particulièrement intéressantes lors du déroulement du jeu.
 
 ## Déroulement du jeu
 
