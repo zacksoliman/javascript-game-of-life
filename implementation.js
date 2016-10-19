@@ -39,7 +39,6 @@ function nextState(x, y) {
 }
 
 function changeState(x, y) {
-  console.log('changeState')
     cells[y][x] = +!cells[y][x];
     draw(x, y, cells);
 }

@@ -46,7 +46,7 @@ var Grid = {
 
         for (i = 0; i < rows; i++) {
             $newRow = $('<tr></tr>');
-            for (j = 0; j < cols; j++){
+            for (j = 0; j < cols; j++) {
                 $td = $('<td id="' + i + '-' + j + '" onclick="changeState(' + i + ',' + j + ')"></td>');
                 $td = $($td).appendTo($newRow);
             }
@@ -81,23 +81,17 @@ function stop() {
 }
 
 function mouseDown(e) {
-  console.log('mouseDown')
-  isMouseDown = true;
-  //$(this).css('background-color', currentColor);
-  return false;
+    isMouseDown = true;
+    return false;
 }
 
 function mouseOver(e) {
-  console.log('mouseover')
-  if (isMouseDown) {
-    //$(this).css('background-color', currentColor);
-    console.log(this.id)
-    var position = this.id.split('-');
-    changeState(+position[0], +position[1]);
-  }
+    if (isMouseDown) {
+        var position = this.id.split('-');
+        changeState(+position[0], +position[1]);
+    }
 }
 
 $(document).mouseup(function () {
-      console.log('mouseup')
-      isMouseDown = false;
-    })
+    isMouseDown = false;
+});

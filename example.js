@@ -1,6 +1,6 @@
 // État de la grille
 var largeur=40, hauteur=40;
-var cells = [];
+var cells = []; // Besoin d'un tableau 2D de 40x40 ici pour gérer la grille
 
 function changeState(x, y) {
     console.log('changeState');
