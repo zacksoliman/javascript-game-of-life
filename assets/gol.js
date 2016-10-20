@@ -39,6 +39,8 @@ $(function() {
 
 var Grid = {
     create: function(rows, cols) {
+        $('#h').val(rows)
+        $('#w').val(cols)
         var $grid = $("#grid");
         var i = 0;
         var j = 0;
