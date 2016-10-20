@@ -156,19 +156,12 @@ Contrairement à codeBoot, la fonction `print`[^2] pour afficher du texte n'exis
 
 ## Implantation
 
-<!-- TODO -->
-
 #### Documentation de l'API
 
-Nous allons faire un survol de l'API que nous avons développé pour vous aider à implanter le jeu. Vos êtes encouragés à essayer ces fonctions dans la console Javascript de votre fureteur pour mieux comprendre.
+L'API mis à votre disposition pour vous aider à implanter le jeu est plutôt simple. Vous êtes encouragés à essayer ces fonctions dans la console Javascript pour mieux comprendre.
 
-* Grid.create(rows, cols) => Crée une grille de 'rows' lignes et 'cols' colonnes et
-  la dessine sur la page
-
-exemple:
-
-* Grid.colorCell(x, y, color) => Remplit la cellule qui ce trouve sur la ligne x et
-  la colonne y avec la couleur color
+* `Grid.create(rows, cols)` : crée une grille de `rows` lignes et `cols` colonnes et la dessine sur la page
+* `Grid.colorCell(x, y, color)` : remplit la cellule qui ce trouve sur la ligne x et la colonne y avec la couleur `color`
 
 
 #### Liste de fonctions à coder
@@ -208,7 +201,7 @@ La couleur affichée à l'écran sera une combinaison de ces trois couleurs. Vou
 * Turquoise (vivant dans les grilles 2 et 3)
 * Blanc (vivant dans toutes les grilles)
 
-![Couleurs possibles](img/bonus-couleurs.png){width=40%}
+![Couleurs possibles](img/bonus-couleurs.png){width=30%}
 
 De plus :
 
@@ -228,14 +221,15 @@ De plus :
     * l'élégance et la lisibilité du code
     * la présence de commentaires explicatifs lorsque nécessaire
     * le choix des identificateurs
-    * la décomposition fonctionnelle et le choix de tests unitaires pertinents.
+    * la décomposition fonctionnelle et le choix de tests unitaires pertinents
 
 * Indications :
-    * La performance de votre code doit être raisonnable
-    * Chaque fonction devrait avoir un bref commentaire pour indiquer ce qu'elle fait
+    * La performance de votre code doit être raisonnable.
+    * Chaque fonction devrait avoir un bref commentaire pour indiquer ce qu'elle fait.
     * Il devrait y avoir des lignes blanches pour que le code ne soit pas trop dense (utilisez votre bon sens pour arriver à un code facile à lire)
-    * Les identificateurs doivent être bien choisis pour être compréhensibles (évitez les noms à une lettre, à l'exception de `i`, `j`, ... pour les variables d'itérations des boucles `for`)
+    * Les identificateurs doivent être bien choisis pour être compréhensibles (évitez les noms à une lettre, à l'exception de `i`, `j`, ... pour les variables d'itérations des boucles `for`).
     * Vous devez respecter le standard de code pour ce projet (soit, les noms de variables en camelCase).
+    * Il ne devrait plus y avoir de code de debug (aka, `console.log(...)`) dans la version finale remise.
 
 [^1]: Voir [Editor war sur Wikipédia](https://en.wikipedia.org/wiki/Editor_war) pour plus de détails
 [^2]: Techniquement, les navigateurs ont une fonction `print`, mais si vous l'utilisez, vous vous retrouverez à littéralement imprimer la page web...
