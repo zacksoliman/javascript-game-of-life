@@ -34,7 +34,9 @@ $(function() {
     });
 });
 
-// object that represents the grid. Will expose methods to manipulate it's dislay.
+
+/* THE GRID API  */
+
 var Grid = {
     create: function(rows, cols) {
         var $grid = $("#grid");
@@ -54,12 +56,6 @@ var Grid = {
         }
 
     },
-    changeCellHeight: function() {
-        //TODO
-    },
-    changeCellWidth: function() {
-        //TODO
-    },
     colorCell: function(x, y, color) {
         $('#' + x + '-' + y).css('background-color', color);
         currentColor = color;
@@ -69,6 +65,8 @@ var Grid = {
 var currentColor = 'darkblue';
 var playInterval = null;
 var isMouseDown = false;
+
+/* HANDLERS  */
 
 function play() {
     if(playInterval == null)

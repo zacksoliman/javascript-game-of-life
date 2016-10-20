@@ -101,7 +101,7 @@ Puisque le travail pratique demandera d'écrire du code qui sera lié à une pag
 
 Vous devrez écrire votre code dans un fichier (il vous faudra donc un éditeur de texte - voir les choix plus bas) et exécuter votre code dans un navigateur.
 
-Pour lier votre code à la page HTML : 
+Pour lier votre code à la page HTML :
 
 1. téléchargez le fichier `game-of-life.zip` sur StudiUM et décompressez-le quelque part.
 2. Ouvrez le fichier `index.html` dans Firefox ou Chromium
@@ -158,13 +158,23 @@ Contrairement à codeBoot, la fonction `print`[^2] pour afficher du texte n'exis
 
 <!-- TODO -->
 
-Expliquer l'API
+#### Documentation de l'API
 
-Liste de fonctions à coder
+Nous allons faire un survol de l'API que nous avons développé pour vous aider à implanter le jeu. Vos êtes encouragés à essayer ces fonctions dans la console Javascript de votre fureteur pour mieux comprendre.
+
+* Grid.create(rows, cols) => Crée une grille de 'rows' lignes et 'cols' colonnes et
+  la dessine sur la page
+
+exemple:
+
+* Grid.colorCell(x, y, color) => Remplit la cellule qui ce trouve sur la ligne x et
+  la colonne y avec la couleur color
+
+
+#### Liste de fonctions à coder
 
 * `random` : fonction servant à générer une grille populée de façon aléatoire. La fonction est appellée lorsqu'on clique sur le bouton `Random` avec en paramètre le pourcentage (nombre entre 1 et 99) entré dans la zone de texte juste à côté.
 
-***Note* : Vous pouvez (et c'est même encouragé) vous créer vos propres fonctions pour vous aider.**
 
 #### Comportement de la grille
 
