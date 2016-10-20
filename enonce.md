@@ -2,7 +2,7 @@
 
 ------------------------------------------------------------------
 
-## Introduction *z
+## Introduction
 
 ### Présentation du TP
 
@@ -141,26 +141,45 @@ Ces deux projets étant des projets libres, certaines variantes (plus jolies et 
 * [NeoVim](https://neovim.io/)
 
 
-## Implantation *z
+## Implantation
 
 #### Documentation de l'API
 
 Nous allons faire un survol de l'API que nous avons développé pour vous aider à implanter le jeu. Vos êtes encouragés à essayer ces fonctions dans la console Javascript de votre fureteur pour mieux comprendre.
 
-* Grid.create(rows, cols) => Crée une grille de 'rows' lignes et 'cols' colonnes et
+* `Grid.create(rows, cols)` => Crée une grille de 'rows' lignes et 'cols' colonnes et
   la dessine sur la page
 
-exemple:
+  Vous pouvez ouvrir la page `index.html` sur votre fureteur et exécuter la fonction `Grid.create(10, 10)`. Comme ceci:
 
-* Grid.colorCell(x, y, color) => Remplit la cellule qui ce trouve sur la ligne x et
+  ![](img/create-ex.png){width=25%}
+
+  Ce qui deverai vous donner le resultat suivant:
+
+  ![](img/create-result.png){width=25%}
+
+* `Grid.colorCell(x, y, color)` => Remplit la cellule qui ce trouve sur la ligne x et
   la colonne y avec la couleur color
+
+  Par exemple, si on exécute `Grid.colorCell(3, 6, '#00008B')` ou `Grid.colorCell(3, 6, 'dark blue')` (dark blue correspond au code hexadecimal #00008B) on deverait obtenire la
+  grille montrée dans la figure 6
+
+  ![](img/grid-coloring.png){width=25%}
 
 
 #### Liste de fonctions à coder
 
+* `changeState(x, y)`: cette fonction sera utilisée par votre code interne, elle servira à changer l'état de la cellule `(x,y)` (mort ou vivante).
 
-* Random : remplit la grille avec une densité aléatoire d'un certain pourcentage. Pour cela, la fonction `random` est appellée avec en paramètre le pourcentage (0 à 99) entré dans la zone de texte juste à côté.
+* `step()`: est exécuté à chaque pas de l'évolution du jeu lorsqu'on on clique sur le bouton `Play` ou `Step` si on veut observer l'évolution du jeu étape par étape.
 
+* `randomGrid(percent)` : remplit la grille avec une densité aléatoire d'un certain pourcentage. Pour cela, la fonction `randomGrid` est appellée par le boutton `Random` avec en paramètre le pourcentage (0 à 99) entré dans la zone de texte juste à côté.
+
+* `resetGrid()`: cette fonction devrait vider la grille de toutes les cellules vivantes. On devrait donc voire une grille vide sur la page après avoir exécuté cette fonction.
+
+* `resizeGrid(width, height)`: sert à redimensionner la grille. La fonction est appelée à chaque fois qu'on modifie les valeurs de longueur et largeur sur l'interface:
+
+ ![](img/resize.png){width=25%}
 
 
 **Vous pouvez (et c'est même encouragé) vous créer vos propres fonctions pour vous aider.**
