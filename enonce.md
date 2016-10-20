@@ -103,7 +103,7 @@ Puisque le travail pratique demandera d'écrire du code qui sera lié à une pag
 
 Vous devrez écrire votre code dans un fichier (il vous faudra donc un éditeur de texte - voir les choix plus bas) et exécuter votre code dans un navigateur.
 
-Pour lier votre code à la page HTML : 
+Pour lier votre code à la page HTML :
 
 1. téléchargez le fichier `game-of-life.zip` sur StudiUM et décompressez-le quelque part.
 2. Ouvrez le fichier `index.html` dans Firefox ou Chromium
@@ -135,7 +135,7 @@ Si vous souhaitez aller plus loin, vous voudrez possiblement tester l'un des deu
 
 Un certain apprentissage est requis pour s'habituer aux deux éditeurs de texte, mais l'effort investi au début est *très payant*. Vous pouvez consulter des tutoriels : [Tour guidé d'Emacs](https://www.gnu.org/software/emacs/tour/), [Tutoriel interactif pour vim](http://www.openvim.com/tutorial.html).
 
-Ces deux projets étant des projets libres, certaines variantes (plus jolies et avec de la configuration par défaut plus intuitive) existent : 
+Ces deux projets étant des projets libres, certaines variantes (plus jolies et avec de la configuration par défaut plus intuitive) existent :
 
 * [Spacemacs](http://spacemacs.org/)
 * [NeoVim](https://neovim.io/)
@@ -143,12 +143,25 @@ Ces deux projets étant des projets libres, certaines variantes (plus jolies et 
 
 ## Implantation *z
 
-Expliquer l'API
+#### Documentation de l'API
 
-Liste de fonctions à coder
+Nous allons faire un survol de l'API que nous avons développé pour vous aider à implanter le jeu. Vos êtes encouragés à essayer ces fonctions dans la console Javascript de votre fureteur pour mieux comprendre.
+
+* Grid.create(rows, cols) => Crée une grille de 'rows' lignes et 'cols' colonnes et
+  la dessine sur la page
+
+exemple:
+
+* Grid.colorCell(x, y, color) => Remplit la cellule qui ce trouve sur la ligne x et
+  la colonne y avec la couleur color
+
+
+#### Liste de fonctions à coder
 
 
 * Random : remplit la grille avec une densité aléatoire d'un certain pourcentage. Pour cela, la fonction `random` est appellée avec en paramètre le pourcentage (0 à 99) entré dans la zone de texte juste à côté.
+
+
 
 **Vous pouvez (et c'est même encouragé) vous créer vos propres fonctions pour vous aider.**
 
