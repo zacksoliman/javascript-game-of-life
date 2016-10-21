@@ -1,5 +1,5 @@
 /*
-  Author(s): Zakaria Soliman
+  Author(s): Zakaria Soliman, Nicolas Hurtubise
 
   This is a small library to assists IFT1015 students with their midterm
   programming project.

@@ -138,7 +138,24 @@ Ces deux logiciels étant des logiciels libres, certaines variantes (plus jolies
 * [Spacemacs](http://spacemacs.org/)
 * [NeoVim](https://neovim.io/)
 
-## Implantation
+### Débugger le code
+
+  Puisque le TP sera à réaliser dans un navigateur plutôt que dans codeBoot, vous n'aurez plus accès aux mêmes outils. Vous aurez cependant accès à des outils de développement et de débuggage similaires : les navigateurs modernes ont généralement une console dans laquelle on peut entrer du Javascript à exécuter.
+
+  * Sous `Firefox` : tapez `Ctrl+Shift+k` pour ouvrir la console.
+  * Sous `Chrome/Chromium` : tapez `Ctrl+Shift+k` pour ouvrir la console.
+
+  Dans les deux cas, assurez-vous d'avoir l'onglet "Console" sélectionné.
+
+*Note* : sur Mac, remplacez `Ctrl` par `Cmd` et tout devrait bien aller.
+
+Contrairement à codeBoot, la fonction `print`[^2] pour afficher du texte n'existe pas. On utilise plutôt la fonction `console.log(...)` qui affiche des messages dans la console de développement.
+
+
+![Console de Firefox](img/console/firefox.png){width=50%}
+![Console de Chromium](img/console/chromium.png){width=50%}
+
+### Implantation
 
 #### Explication de l'API
 
@@ -161,22 +178,6 @@ Ces deux logiciels étant des logiciels libres, certaines variantes (plus jolies
 
   ![](img/grid-coloring.png){width=25%}
 
-#### Débugger le code
-
-  Puisque le TP sera à réaliser dans un navigateur plutôt que dans codeBoot, vous n'aurez plus accès aux mêmes outils. Vous aurez cependant accès à des outils de développement et de débuggage similaires : les navigateurs modernes ont généralement une console dans laquelle on peut entrer du Javascript à exécuter.
-
-  * Sous `Firefox` : tapez `Ctrl+Shift+k` pour ouvrir la console.
-  * Sous `Chrome/Chromium` : tapez `Ctrl+Shift+k` pour ouvrir la console.
-
-  Dans les deux cas, assurez-vous d'avoir l'onglet "Console" sélectionné.
-
-*Note* : sur Mac, remplacez `Ctrl` par `Cmd` et tout devrait bien aller.
-
-Contrairement à codeBoot, la fonction `print`[^2] pour afficher du texte n'existe pas. On utilise plutôt la fonction `console.log(...)` qui affiche des messages dans la console de développement.
-
-
-![Console de Firefox](img/console/firefox.png){width=50%}
-![Console de Chromium](img/console/chromium.png){width=50%}
 
 #### Fonction à coder
 
