@@ -51,7 +51,7 @@ var Grid = {
         for (i = 0; i < rows; i++) {
             $newRow = $('<tr></tr>');
             for (j = 0; j < cols; j++) {
-                $td = $('<td id="' + i + '-' + j + '" onclick="changeState(' + i + ',' + j + ')"></td>');
+                $td = $('<td id="' + j + '-' + i + '" onclick="changeState(' + j + ',' + i + ')"></td>');
                 $td = $($td).appendTo($newRow);
             }
             $newRow.appendTo($grid);

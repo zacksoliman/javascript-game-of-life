@@ -20,7 +20,7 @@ var resetGrid = function() {
 };
 
 var resizeGrid = function(newWidth, newHeight) {
-    Grid.create(newWidth, newHeight);
+    Grid.create(newHeight, newWidth);
 
     console.log('resizeGrid ' + newWidth + ' ' + newHeight);
 };

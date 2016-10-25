@@ -173,7 +173,7 @@ Contrairement à codeBoot, la fonction `print`[^2] pour afficher du texte n'exis
 * `Grid.colorCell(x, y, color)` => Remplit la cellule qui ce trouve sur la ligne x et
   la colonne y avec la couleur color
 
-  Par exemple, si on exécute `Grid.colorCell(3, 6, '#00008B')` ou `Grid.colorCell(3, 6, 'dark blue')` (dark blue correspond au code hexadecimal #00008B) on deverait obtenire la
+  Par exemple, si on exécute `Grid.colorCell(6, 3, '#00008B')` ou `Grid.colorCell(6, 3, 'dark blue')` (dark blue correspond au code hexadecimal #00008B) on deverait obtenire la
   grille montrée dans la figure 4
 
   ![](img/grid-coloring.png){width=25%}
